@@ -25,11 +25,11 @@ export default function Hero() {
           Darryl <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">Pelwigan</span>
         </h1>
 
-        <p className="text-sm md:text-base font-mono text-neutral-400 dark:text-zinc-500 mb-8 transition-colors duration-300">
+        <p className="text-sm md:text-base font-mono text-gray-600 dark:text-gray-400 mb-8 transition-colors duration-300">
           darrylpelwigan@gmail.com
         </p>
 
-        <p className="text-lg md:text-xl text-neutral-600 dark:text-zinc-400 max-w-2xl font-light leading-relaxed mb-10 transition-colors duration-300">
+        <p className="text-xl md:text-xl text-gray-600 dark:text-gray-400 dark:font-light leading-relaxed mb-10 transition-colors duration-300">
           Full-Stack Web Developer building scalable apps, websites and tools. Passionate about clean code, and solving complex problems with simple solutions. 
         </p>
 

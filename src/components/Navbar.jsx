@@ -24,17 +24,14 @@ export default function Navbar() {
             <button onClick={() => scrollToSection('about')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
               About
             </button>
-            <button onClick={() => scrollToSection('projects')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-              Projects
-            </button>
             <button onClick={() => scrollToSection('skills')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
               Skills
             </button>
             <button onClick={() => scrollToSection('experience')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
               Experience
             </button>
-            <button onClick={() => scrollToSection('blog')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-              Blog
+            <button onClick={() => scrollToSection('projects')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+              Projects
             </button>
             <button onClick={() => scrollToSection('contact')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
               Contact

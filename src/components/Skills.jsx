@@ -1,48 +1,42 @@
 import React from 'react'
 
+import { TechStackCloud } from './ui/TechStackCloud';
+
+import { TECH_STACK, SERVICES } from '../constants/Data';
+import ComponentTitleHeader from './ui/ComponentTitleHeader';
+
 const skillCategories = [
-  {
-    category: 'AI / Machine Learning',
-    skills: [
-      { name: 'PyTorch', level: 95 },
-      { name: 'LangChain', level: 90 },
-      { name: 'Transformers', level: 88 },
-      { name: 'Computer Vision', level: 85 },
-      { name: 'MLOps', level: 82 }
-    ]
-  },
   {
     category: 'Web Development',
     skills: [
-      { name: 'TypeScript', level: 93 },
-      { name: 'React / Next.js', level: 92 },
-      { name: 'Node.js', level: 88 },
-      { name: 'Python', level: 95 },
-      { name: 'Go', level: 75 }
+      { name: 'Laravel', level: 90 },
+      { name: 'Python Django Rest Framework', level: 80 },
+      { name: 'React JS', level: 83 },
+      { name: 'Wordpress using Elementor', level: 80 },
+      { name: 'Typescript', level: 75 },
+      { name: 'PostgreSQL', level: 83 }
     ]
   },
   {
-    category: 'Infrastructure',
+    category: 'Infrastructure & Other Tools',
     skills: [
-      { name: 'Docker', level: 90 },
-      { name: 'Kubernetes', level: 85 },
-      { name: 'AWS', level: 88 },
-      { name: 'CI/CD', level: 87 },
-      { name: 'PostgreSQL', level: 83 }
+      { name: 'Ubuntu / Linux', level: 70 },
+      { name: 'GitHub', level: 85 },
+      { name: 'Docker', level: 60 },
+      { name: 'AWS', level: 60 },
+      { name: 'Postman', level: 80 },
     ]
   }
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
+    <section id="skills" className="bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
       <div className="section-container">
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Tech Stack</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400">The tools and technologies I work with daily.</p>
-        </div>
+        
+      <ComponentTitleHeader title="Skills" heading="Tech Stack" description="A snapshot of my technical skills, tools, and technologies I work with." /> 
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 pb-16">
           {skillCategories.map((category) => (
             <div key={category.category} className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-lg p-8 transition-colors duration-300">
               <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{category.category}</h3>
@@ -66,6 +60,8 @@ export default function Skills() {
             </div>
           ))}
         </div>
+
+        <TechStackCloud stack={TECH_STACK} />
       </div>
     </section>
   )
