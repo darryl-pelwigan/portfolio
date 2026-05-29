@@ -16,6 +16,7 @@ function App() {
       <div className="bg-white dark:bg-black transition-colors duration-300">
         <Navbar />
         <Hero />
+        <About />
         <Projects />
         <Skills />
         <Experience />
