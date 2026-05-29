@@ -16,7 +16,7 @@ export function InteractiveTerminal({ username }) {
         </div>
         <div>
           <span className="text-cyan-500">$</span> cat skills.txt
-          <p className="text-zinc-300 mt-0.5">&gt; laravel, react.js, wordpress, python, django, rest-api, mysql</p>
+          <p className="text-zinc-300 mt-0.5">&gt; php, laravel, python, django, rest-api, react.js, wordpress, postgresql , mysql</p>
         </div>
         <div>
           <span className="text-cyan-500">$</span> echo $STATUS

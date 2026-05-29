@@ -2,7 +2,7 @@ import React from "react";
 
 export function TechStackCloud({ stack }) {
   return (
-    <div className="space-y-4 text-left pt-4">
+    <div className="space-y-4 text-left">
       <h3 className="text-xs font-mono font-bold tracking-wider text-neutral-400 dark:text-zinc-500 uppercase">
         // Core Technologies & Tooling
       </h3>
