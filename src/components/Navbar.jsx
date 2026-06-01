@@ -19,7 +19,6 @@ export default function Navbar() {
             Portfolio
           </div>
           
-          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
             <button onClick={() => scrollToSection('about')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
               About
@@ -37,7 +36,6 @@ export default function Navbar() {
               Contact
             </button>
 
-            {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
               className="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 transition"
@@ -55,9 +53,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            {/* Mobile Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 transition"
@@ -84,7 +80,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2 bg-white dark:bg-black">
             <button onClick={() => scrollToSection('about')} className="block w-full text-left text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white py-2 transition">
