@@ -1,187 +1,132 @@
-# AI Engineer Portfolio
+# Full Stack Developer Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Perfect for showcasing AI/ML projects, skills, and experience.
+A modern, responsive portfolio website template focused on Full Stack Developer work. Built with React, Vite, and Tailwind CSS for the frontend — easily extended with a Node/Express or other backend for API and data needs.
+
+## Why This Template
+
+- Modern frontend tooling with fast development feedback using Vite
+- Responsive, mobile-first UI with Tailwind CSS
+- Component-driven structure to showcase projects, skills, and experience
+- Easy to extend into a full-stack app (add an API, database, or server-side rendering)
 
 ## Features
 
 - **Modern Design**: Dark theme with gradient accents and smooth animations
-- **Responsive Layout**: Mobile-first approach works on all devices
-- **Fast Performance**: Built with Vite for optimal build times
-- **Easy Deployment**: Ready for Vercel deployment
-- **Customizable Content**: Easy to update projects, skills, and experience sections
+- **Responsive Layout**: Works across phones, tablets, and desktop
+- **Componentized UI**: Clear React components for each section
+- **Easy Deployment**: Ready for static hosting (Vercel) or full-stack deployment
 
 ## Sections
 
-- **Hero**: Eye-catching introduction with key stats
-- **Projects**: Showcase your best work with descriptions and tech stacks
-- **Skills**: Display technical proficiencies with progress bars
-- **Experience**: Timeline of your professional journey
-- **Blog**: Featured articles and writing samples
-- **Contact**: Get in touch form and social links
-- **Footer**: Copyright and social media links
+- **Hero**: Introduction and headline
+- **About**: Short biography and highlights
+- **Projects**: Showcase work with descriptions and tech stacks
+- **Skills**: Technical proficiencies and tools
+- **Experience**: Timeline of roles and achievements
+- **Contact**: Contact links and form
+- **Footer**: Social links and copyright
+
+## Project Structure (this repository)
+
+```
+portfolio/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   └── Skills.jsx
+│   ├── components/ui/
+│   │   ├── BiographySection.jsx
+│   │   ├── ComponentTitleHeader.jsx
+│   │   ├── InteractiveTerminal.jsx
+│   │   ├── MockEditorWindow.jsx
+│   │   ├── ServicesGrid.jsx
+│   │   ├── SocialLinks.jsx
+│   │   └── TechStackCloud.jsx
+│   ├── constants/
+│   │   └── Data.jsx
+│   └── context/
+│       └── ThemeContext.jsx
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── vite.config.js
+```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 16+ 
-- npm or yarn
+- Node.js 16+ is recommended
+- npm (or yarn)
 
-### Installation
+### Install & Run
 
-1. Navigate to the project directory:
-```bash
-cd portfolio
-```
-
-2. Install dependencies:
 ```bash
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
 ```
 
-The portfolio will be available at `http://localhost:5173`
+Open http://localhost:5173 to view the site locally.
 
-## Customization
-
-### Update Your Information
-
-1. **Hero Section** - Edit [src/components/Hero.jsx](src/components/Hero.jsx)
-   - Change name and headline
-   - Update stats (projects, experience, etc.)
-   - Modify skills in the terminal block
-
-2. **Projects** - Edit [src/components/Projects.jsx](src/components/Projects.jsx)
-   - Add/remove/edit project cards
-   - Update project descriptions and tech stacks
-   - Add project links
-
-3. **Skills** - Edit [src/components/Skills.jsx](src/components/Skills.jsx)
-   - Customize skill categories
-   - Update skill names and proficiency levels
-
-4. **Experience** - Edit [src/components/Experience.jsx](src/components/Experience.jsx)
-   - Add your work history
-   - Update companies, roles, and achievements
-   - Modify tech stack for each position
-
-5. **Blog** - Edit [src/components/Blog.jsx](src/components/Blog.jsx)
-   - Add your blog posts
-   - Update categories, dates, and excerpts
-
-6. **Contact** - Edit [src/components/Contact.jsx](src/components/Contact.jsx)
-   - Update email address
-   - Add/remove social media links
-   - Configure form submission endpoint
-
-### Change Color Scheme
-
-Colors are defined in [tailwind.config.js](tailwind.config.js). Modify the gradient colors and theme colors as needed.
-
-## Building for Production
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `dist` directory.
+Build output will be in the `dist/` folder.
 
-## Deployment to Vercel
+## Customization Guide
 
-### Option 1: Using Vercel CLI
+Edit the component files inside `src/components` to update content and layout. Key files:
 
-1. Install Vercel CLI:
-```bash
-npm install -g vercel
-```
+- `src/components/Hero.jsx` — headline, name, hero stats
+- `src/components/About.jsx` — biography and summary
+- `src/components/Projects.jsx` — project cards and details
+- `src/components/Skills.jsx` — skills and proficiency visualization
+- `src/components/Experience.jsx` — work history timeline
+- `src/components/Contact.jsx` — contact links and form behavior
+- `src/components/Footer.jsx` — social links and footer content
 
-2. Deploy:
-```bash
-vercel
-```
+Shared UI components live in `src/components/ui/` and constants are in `src/constants/Data.jsx`.
 
-3. Follow the prompts to connect your Vercel account and configure settings
+## Extending to Full Stack
 
-### Option 2: GitHub Integration
+To turn this into a full-stack portfolio, add a backend service (e.g., Node + Express, Fastify, or any server) to supply project data, handle contact form submissions, or serve a REST/GraphQL API. Common steps:
 
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "New Project"
-4. Import your GitHub repository
-5. Vercel will auto-detect the Vite configuration
-6. Click "Deploy"
+1. Create a `server/` folder with an Express app
+2. Add API endpoints for projects, posts, or contact submissions
+3. Secure and host the backend (Heroku, Render, Vercel Server Functions, or a VPS)
+4. Point frontend fetch calls to the backend API (use `import.meta.env` for base URLs)
 
-### Option 3: Manual Upload
+## Deployment
 
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to Vercel
+This project can be deployed as a static site (frontend-only) or as a full-stack app:
 
-## Project Structure
-
-```
-portfolio/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Experience.jsx
-│   │   ├── Blog.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-└── package.json
-```
-
-## Technologies Used
-
-- **React 18** - UI library
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript (ES6+)** - Programming language
-
-## Performance
-
-- Optimized bundle size with Vite
-- CSS minification with Tailwind
-- Smooth scrolling and animations
-- Fast load times
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-MIT - Feel free to use this template for your own portfolio!
+- Static frontend: Deploy `dist/` to Vercel, Netlify, or any static host
+- Full-stack: Deploy backend separately or as serverless functions, and configure frontend to call the API
 
 ## Tips
 
-1. **Add Real Images**: Replace placeholder colors in Projects section with actual project images
-2. **Implement Blog**: Connect the blog section to a CMS or markdown files
-3. **Form Handling**: Configure the contact form to send emails (use services like Formspree, EmailJS, or Nodemailer)
-4. **SEO**: Add meta tags and structured data for better search engine visibility
-5. **Analytics**: Integrate Google Analytics or similar to track visitors
-6. **Custom Domain**: Set up a custom domain in Vercel for your portfolio
+1. Replace placeholder visuals with real screenshots or images in the Projects section
+2. Connect the Contact form to a server, EmailJS, or Formspree for real submissions
+3. Add SEO meta tags in `index.html` and structured data for better discoverability
 
-## Support
+## Resources
 
-For questions or issues, refer to the documentation:
 - [Vite Docs](https://vitejs.dev/)
 - [React Docs](https://react.dev/)
 - [Tailwind CSS Docs](https://tailwindcss.com/)
-- [Vercel Docs](https://vercel.com/docs)
+
+---
+Last Updated: June 2026
