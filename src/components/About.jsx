@@ -4,7 +4,7 @@ import { InteractiveTerminal } from './ui/InteractiveTerminal';
 import { BiographySection } from './ui/BiographySection';
 import { ServicesGrid } from './ui/ServicesGrid';
 
-import { SERVICES } from '../constants/Data';
+import { SERVICES } from '../constants/skillsData';
 import ComponentTitleHeader from './ui/ComponentTitleHeader';
 
 export default function About() {

@@ -1,40 +1,6 @@
 import React, { useState } from 'react'
 import ComponentTitleHeader from './ui/ComponentTitleHeader'
-
-const contactMethods = [
-  {
-    id: 1,
-    icon: '📧',
-    label: 'Email',
-    value: 'hello@portfolio.dev',
-    href: 'mailto:hello@portfolio.dev',
-    type: 'link'
-  },
-  {
-    id: 2,
-    icon: '📱',
-    label: 'Contact Number',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
-    type: 'link'
-  },
-  {
-    id: 3,
-    icon: '💼',
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/yourprofile',
-    href: 'https://linkedin.com/in/yourprofile',
-    type: 'external'
-  },
-  {
-    id: 4,
-    icon: '💬',
-    label: 'Viber',
-    value: '+1 (555) 123-4567',
-    href: 'viber://chat?number=%2B15551234567',
-    type: 'link'
-  }
-]
+import { contactMethods } from '../constants/contactData'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -82,8 +48,8 @@ export default function Contact() {
                 rel={method.type === 'external' ? 'noopener noreferrer' : undefined}
                 className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 hover:border-cyan-400 dark:hover:border-cyan-400 rounded-lg p-4 transition group cursor-pointer flex flex-col items-center justify-center text-center h-32 hover:bg-gray-50 dark:hover:bg-gray-800"
               >
-                <div className="text-3xl mb-2 group-hover:scale-110 transition transform">
-                  {method.icon}
+                <div className="mb-2 group-hover:scale-110 transition transform">
+                  <img src={method.icon} alt={method.label} className="w-10 h-10 mx-auto dark:filter dark:invert dark:brightness-150" />
                 </div>
                 <h4 className="text-xs font-semibold mb-1 text-gray-600 dark:text-gray-400 uppercase tracking-wider">
                   {method.label}

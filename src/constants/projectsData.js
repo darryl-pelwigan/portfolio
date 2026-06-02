@@ -1,0 +1,50 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'HRIS Management System',
+    description: 'An enterprise-grade Human Resource Information System featuring automated payroll processing, employee lifecycle management, leave tracking, and dynamic role-based access control (RBAC). Built with a focus on database optimization and high-performance server side rendering.',
+    tags: ['PHP', 'CodeIgniter', 'MySQL', 'Linux Server'],
+    color: 'from-blue-500 to-yellow-600',
+    Year: '2018',
+  },
+  {
+    id: 2,
+    title: 'Purchase Order Request System',
+    description: 'An internal procurement and supply-chain logging platform designed to streamline corporate purchasing workflows. Includes automated email notification triggers, multi-stage approval pipelines, budget checking mechanisms, and audit-ready data tables.',
+    tags: ['Laravel', 'MySQL', 'Ubuntu Server'],
+    color: 'from-purple-500 to-amber-600',
+    Year: '2019',
+  },
+  {
+    id: 3,
+    title: 'Ticketing System for Issues and Requests',
+    description: 'A centralized service desk solution handling incoming internal corporate technical issues and facility requests. Features real-time status updates, priority SLA matrix queues, automated agent assignments, and custom analytical reporting dashboards.',
+    tags: ['Laravel', 'Bootstrap', 'MySQL'],
+    color: 'from-cyan-500 to-red-600',
+    Year: '2025',
+  },
+  {
+    id: 4,
+    title: 'Real Estate Listing Platform',
+    description: 'A dynamic property discovery engine built with advanced location filtering, map integration systems, and custom database relations. Implements a responsive frontend coupled with optimized server relational schemas to handle deep attribute search indices seamlessly.',
+    tags: ['Python', 'Django', 'React JS', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
+    color: 'from-emerald-500 to-cyan-600',
+    Year: '2026',
+  },
+  {
+    id: 5,
+    title: 'Timesheet Tracker / Management System',
+    description: 'A robust time tracking and productivity platform featuring an interactive tracking dashboard interface, weekly logging grids, and custom REST APIs. Enables detailed project analytics, exportable billable hours logging sheets, and client billing management reporting.',
+    tags: ['Laravel', 'React JS', 'API', 'MySQL', 'MUI'],
+    color: 'from-blue-500 to-rose-600',
+    Year: '2026',
+  },
+  {
+    id: 6,
+    title: 'Website - Law Firm Platform',
+    description: 'A dynamic web application custom-engineered for a legal sector client. Built with custom post types and relational database structures to manage complex case listings, legal services, and firm archives. Developed using optimized, lean custom CSS and modern JavaScript to guarantee exceptional site speed and a tailored, high-performance UI without relying on unnecessary plugins.',
+    tags: ['WordPress', 'Elementor', 'Custom CSS', 'JavaScript', 'Dynamic Architecture'],
+    color: 'from-amber-600 to-green-700',
+    Year: '2025',
+  }
+]

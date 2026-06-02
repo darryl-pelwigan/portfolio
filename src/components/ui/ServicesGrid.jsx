@@ -18,7 +18,9 @@ export function ServicesGrid({ items }) {
                 hover:border-neutral-300 dark:hover:border-zinc-800
                 ${isLastItem ? 'sm:col-span-2' : ''}`}
             >
-              <div className="flex-shrink-0 mt-1">{service.icon}</div>
+              <div className="flex-shrink-0 mt-1">
+                <img src={service.icon} alt={service.title} className="w-10 h-10 dark:filter dark:invert dark:brightness-150" />
+              </div>
               <div className="space-y-1.5">
                 <h4 className="text-lg font-semibold text-neutral-900 dark:text-zinc-100">
                   {service.title}
