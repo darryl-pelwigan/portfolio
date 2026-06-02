@@ -44,21 +44,20 @@ export const SKILL_CATEGORIES = [
     category: 'Web Development',
     skills: [
       { name: 'Laravel', rating: 5 },
-      { name: 'Python Django Rest Framework', rating: 4 },
-      { name: 'React JS', rating: 5 },
+      { name: 'Django Rest Framework', rating: 4 },
+      { name: 'React JS', rating: 4 },
+      { name: 'PostgreSQL', rating: 4 },
       { name: 'WordPress using Elementor', rating: 4 },
-      { name: 'TypeScript', rating: 4 },
-      { name: 'PostgreSQL', rating: 4 }
+      { name: 'TypeScript', rating: 3 },
     ]
   },
   {
     category: 'Infrastructure & Other Tools',
     skills: [
-      { name: 'Ubuntu / Linux', rating: 4 },
       { name: 'GitHub', rating: 5 },
-      { name: 'Docker', rating: 4 },
-      { name: 'AWS', rating: 3 },
-      { name: 'Postman', rating: 5 }
+      { name: 'Postman', rating: 5 },
+      { name: 'Ubuntu / Linux', rating: 3 },
+      { name: 'Docker', rating: 3 },
     ]
   }
 ]
