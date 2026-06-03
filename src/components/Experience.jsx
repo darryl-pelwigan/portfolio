@@ -27,20 +27,25 @@ export default function Experience() {
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-justify">
                 {exp.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                {exp.tags.map((tag) => (
-                  <span 
-                    key={tag}
-                    className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-mono rounded hover:bg-gray-300 dark:hover:bg-gray-700 transition"
-                  >
-                    <img src={getTagIcon(tag)} alt={tag} className="w-4 h-4" />
-                    <span>{tag}</span>
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-3 pt-3">
+                {exp.tags.map((tag) => {
+                  const isWordPressIcon = /wordpress|elementor/i.test(tag)
+                  return (
+                    <span 
+                      key={tag}
+                      className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/70 dark:bg-slate-800/90 text-white text-sm font-medium rounded-full ring-1 ring-white/10 hover:bg-slate-900 dark:hover:bg-slate-700 transition"
+                    >
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-gray-700 shadow-sm shadow-black/10">
+                        <img src={getTagIcon(tag)} alt={tag} className={`w-6 h-6 object-contain ${isWordPressIcon ? 'dark:invert' : ''}`} />
+                      </span>
+                      <span>{tag}</span>
+                    </span>
+                  )
+                })}
               </div>
      
             </div>

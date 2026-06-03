@@ -11,10 +11,10 @@ export default function Projects() {
     <section id="projects" className="bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
       <div className="section-container">
         <ComponentTitleHeader 
-          title="Projects"
-          heading="What I've Built"
-          description="A showcase of end-to-end applications, custom architectures, and engineered web solutions."
-        />
+            title="Projects"
+            heading="What I've Built"
+            description="A showcase of production-ready applications, custom architectures, and web solutions engineered during my time working in professional agency and company environments."
+          />
 
         <div className="grid md:grid-cols-2 gap-6">
           {sortedProjects.map((project) => (

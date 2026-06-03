@@ -14,6 +14,10 @@ import postmanIcon from '../assets/postman.svg'
 import jsIcon from '../assets/javascript.svg'
 import htmlIcon from '../assets/html-5.svg'
 import cssIcon from '../assets/css-3.svg'
+import typescriptIcon from '../assets/typescript.svg'
+import codeIgniterIcon from '../assets/codeigniter.svg'
+import javaIcon from '../assets/java.svg'
+import dockerIcon from '../assets/docker.svg'
 
 export const TECH_STACK = {
   backend: [
@@ -28,6 +32,7 @@ export const TECH_STACK = {
   frontend: [
     { name: 'ReactJS', icon: reactIcon },
     { name: 'Tailwind CSS', icon: tailwindIcon },
+    { name: 'TypeScript', icon: typescriptIcon },
     { name: 'JavaScript', icon: jsIcon },
     { name: 'HTML', icon: htmlIcon },
     { name: 'CSS', icon: cssIcon }
@@ -35,7 +40,8 @@ export const TECH_STACK = {
   tools: [
     { name: 'Ubuntu / Linux', icon: ubuntuIcon },
     { name: 'GitHub', icon: githubIcon },
-    { name: 'Postman', icon: postmanIcon }
+    { name: 'Postman', icon: postmanIcon },
+    { name: 'Docker', icon: dockerIcon }
   ]
 }
 

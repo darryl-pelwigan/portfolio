@@ -1,38 +1,34 @@
-import apiIcon from '../assets/api.svg'
-import githubIcon from '../assets/github.svg'
-import ubuntuIcon from '../assets/ubuntu.svg'
-
 export const contactMethods = [
   {
     id: 1,
-    icon: apiIcon,
+    icon: 'email',
     label: 'Email',
-    value: 'hello@portfolio.dev',
-    href: 'mailto:hello@portfolio.dev',
+    value: 'darrylpelwigan@gmail.com ',
+    href: 'mailto:darrylpelwigan@gmail.com',
     type: 'link'
   },
   {
     id: 2,
-    icon: ubuntuIcon,
-    label: 'Contact Number',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
+    icon: 'phone',
+    label: 'Phone',
+    value: '+639857545045',
+    href: 'tel:+639857545045',
     type: 'link'
   },
   {
     id: 3,
-    icon: githubIcon,
+    icon: 'linkedin',
     label: 'LinkedIn',
-    value: 'linkedin.com/in/yourprofile',
-    href: 'https://linkedin.com/in/yourprofile',
+    value: 'linkedin.com/in/darryl-pelwigan',
+    href: 'https://www.linkedin.com/in/darryl-pelwigan/',
     type: 'external'
   },
   {
     id: 4,
-    icon: apiIcon,
+    icon: 'viber',
     label: 'Viber',
-    value: '+1 (555) 123-4567',
-    href: 'viber://chat?number=%2B15551234567',
+    value: '+639857545045',
+    href: 'viber://chat?number=%2B639857545045',
     type: 'link'
   }
 ]

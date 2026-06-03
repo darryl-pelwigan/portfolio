@@ -16,6 +16,10 @@ import reactIcon from '../assets/react.svg'
 import tailwindIcon from '../assets/tailwindcss.svg'
 import ubuntuIcon from '../assets/ubuntu.svg'
 import wordpressIcon from '../assets/wordpress.svg'
+import codeIgniterIcon from '../assets/codeigniter.svg'
+import javaIcon from '../assets/java.svg'
+import typescriptIcon from '../assets/typescript.svg'
+import dockerIcon from '../assets/docker.svg'
 
 const normalizeTag = (tag) => tag.toLowerCase().trim()
 
@@ -24,14 +28,15 @@ export const getTagIcon = (tag) => {
 
   if (norm.includes('php')) return phpIcon
   if (norm.includes('laravel')) return laravelIcon
-  if (norm.includes('codeigniter')) return phpIcon
+  if (norm.includes('codeigniter')) return codeIgniterIcon
   if (norm.includes('wordpress')) return wordpressIcon
   if (norm.includes('elementor')) return wordpressIcon
   if (norm.includes('react')) return reactIcon
   if (norm.includes('python')) return pythonIcon
   if (norm.includes('django')) return djangoIcon
-  if (norm.includes('javascript') || norm === 'js') return jsIcon
-  if (norm.includes('typescript') || norm === 'ts') return jsIcon
+  if (norm.includes('java')) return javaIcon
+  if (norm.includes('javascript') || norm.includes('js') || norm.includes('jquery') || norm.includes('ajax') ||  norm === 'js') return jsIcon
+  if (norm.includes('typescript') || norm === 'ts') return typescriptIcon
   if (norm.includes('tailwind')) return tailwindIcon
   if (norm.includes('bootstrap')) return htmlIcon
   if (norm.includes('css')) return cssIcon
@@ -43,6 +48,7 @@ export const getTagIcon = (tag) => {
   if (norm.includes('apigee')) return apigeeIcon
   if (norm.includes('api')) return apiIcon
   if (norm.includes('Github') || norm.includes('github')) return githubIcon
+  if (norm.includes('docker')) return dockerIcon
 
   return apiIcon
 }

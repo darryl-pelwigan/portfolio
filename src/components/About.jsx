@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../assets/profile.jpg';
 import { MockEditorWindow } from './ui/MockEditorWindow';
 import { InteractiveTerminal } from './ui/InteractiveTerminal';
 import { BiographySection } from './ui/BiographySection';
@@ -24,7 +25,7 @@ export default function About() {
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5 space-y-6 w-full max-w-md mx-auto lg:max-w-none">
-            <MockEditorWindow imgPath="/path-to-your-code-image.jpg" />
+            <MockEditorWindow imgPath={profileImage} />
             <InteractiveTerminal username="darryl_pelwigan" />
           </div>
 

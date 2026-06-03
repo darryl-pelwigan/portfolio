@@ -5,7 +5,7 @@ export const experiences = [
     company: 'Bnext INC.',
     role: 'Software Engineer',
     description: 'Full-Stack Developer dedicated to building optimized web applications and custom Web APIs that balance engineering excellence with business goals. I am passionate about driving software process improvements that streamline delivery and increase code quality. Known for strong cross-functional collaboration, I work hand-in-hand with engineering teams, product owners, and business analysts to translate complex visions into scalable, maintainable technical solutions.',
-    tags: ['Laravel', 'Python Django', 'React JS', 'Tailwind CSS', 'PostgreSQL', 'API Development', 'WordPress', 'Ubuntu Server Configuration']
+    tags: ['Laravel', 'Python Django', 'React JS', 'Tailwind CSS', 'PostgreSQL', 'TypeScript', 'API Development', 'WordPress', 'Ubuntu Server Configuration']
   },
   {
     id: 2,
