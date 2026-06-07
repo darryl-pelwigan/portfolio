@@ -18,6 +18,14 @@ export default function Footer() {
             darrylpelwigan@gmail.com
           </a>
           <a
+            href="https://drive.google.com/file/d/1u5PAhfLObayZqJaIjkM9LOdbxhJljmhw/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 px-4 py-2 text-sm text-white transition"
+          >
+            View Resume
+          </a>
+          <a
             href="https://github.com/darryl-pelwigan"
             target="_blank"
             rel="noopener noreferrer"

@@ -41,6 +41,15 @@ export default function Hero() {
             View Projects
           </button>
 
+          <a
+            href="https://drive.google.com/file/d/1u5PAhfLObayZqJaIjkM9LOdbxhJljmhw/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-md shadow-md shadow-blue-500/10 transition duration-200 text-sm"
+          >
+            View Resume
+          </a>
+
           <button 
             onClick={() => scrollToSection('contact')}
             className="px-6 py-2.5 bg-white hover:bg-neutral-50 dark:bg-zinc-900/80 dark:hover:bg-zinc-800/80 border border-neutral-300 dark:border-zinc-800 text-neutral-800 dark:text-zinc-200 font-medium rounded-md transition duration-200 text-sm shadow-sm dark:shadow-none"

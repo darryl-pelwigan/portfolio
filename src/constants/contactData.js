@@ -26,7 +26,7 @@ export const contactMethods = [
   {
     id: 4,
     icon: 'viber',
-    label: 'Viber',
+    label: 'Viber / WhatsApp',
     value: '+639857545045',
     href: 'viber://chat?number=%2B639857545045',
     type: 'link'

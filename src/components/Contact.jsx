@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ComponentTitleHeader from './ui/ComponentTitleHeader'
 import { contactMethods } from '../constants/contactData'
 
@@ -31,31 +31,6 @@ const contactIcons = {
 }
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', email: '', message: '' })
-    }, 3000)
-  }
-
   return (
     <section id="contact" className="py-20 bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
       <div className="section-container">
@@ -65,33 +40,39 @@ export default function Contact() {
           description="Have a project in mind? Reach out through any of these channels—I'm always open to discussing new opportunities."
         />
 
-        <div className="grid md:grid-cols-1 gap-12 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {contactMethods.map((method) => (
-              <a
-                key={method.id}
-                href={method.href}
-                target={method.type === 'external' ? '_blank' : undefined}
-                rel={method.type === 'external' ? 'noopener noreferrer' : undefined}
-                className="group border border-gray-300 dark:border-gray-800 rounded-3xl bg-gray-50 dark:bg-gray-950 p-5 transition hover:border-cyan-400 dark:hover:border-cyan-400 hover:bg-white dark:hover:bg-gray-900"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500 text-white shadow-sm shadow-cyan-500/10 transition group-hover:bg-cyan-600">
-                    {contactIcons[method.icon]}
-                  </span>
-                  <div className="grid w-full grid-cols-[auto_1fr] gap-4 items-center">
-                    <span className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">
-                      {method.label}
-                    </span>
-                    <span className="text-sm font-medium text-gray-900 dark:text-gray-200 break-words text-right">
-                      {method.value}
-                    </span>
-                  </div>
-                </div>
-              </a>
-            ))}
+        <div className="space-y-6">
+          <div className="rounded-[2rem] border border-gray-200 bg-slate-50 p-8 shadow-[0_30px_60px_-30px_rgba(15,23,42,0.08)] dark:border-slate-800 dark:bg-slate-950 dark:shadow-[0_30px_60px_-30px_rgba(15,23,42,0.45)]">
+            <p className="max-w-2xl text-base leading-8 text-gray-600 dark:text-gray-300">
+              Whether you have a new project, a question about my work, or want to collaborate—I'm here to help. Pick your preferred contact method below to get in touch.
+            </p>
           </div>
-        </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {contactMethods.map((method) => (
+                <a
+                  key={method.id}
+                  href={method.href}
+                  target={method.type === 'external' ? '_blank' : undefined}
+                  rel={method.type === 'external' ? 'noopener noreferrer' : undefined}
+                  className="group rounded-[1.75rem] border border-gray-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-50 dark:border-slate-800 dark:bg-slate-950 dark:hover:border-cyan-400 dark:hover:bg-slate-900/90"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-500 text-white shadow-sm shadow-cyan-500/20 transition group-hover:bg-cyan-600">
+                      {contactIcons[method.icon]}
+                    </span>
+                    <div className="space-y-2">
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">
+                        {method.label}
+                      </p>
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 break-words">
+                        {method.value}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
       </div>
     </section>
   )
