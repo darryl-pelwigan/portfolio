@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -22,6 +23,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
+      <Analytics />
     </ThemeProvider>
   )
 }
