@@ -13,9 +13,9 @@ export function ServicesGrid({ items }) {
             <div 
               key={idx} 
               className={`flex items-start gap-4 p-6 rounded-xl transition-all duration-300 border
-                bg-neutral-50/50 border-neutral-200/80 shadow-sm
-                dark:bg-zinc-900/20 dark:border-gray-900/80
-                hover:border-neutral-300 dark:hover:border-zinc-800
+                bg-zinc-50 border-zinc-200 shadow-sm
+                dark:bg-zinc-900 dark:border-zinc-800
+                hover:border-indigo-400/50 dark:hover:border-indigo-500/50
                 ${isLastItem ? 'sm:col-span-2' : ''}`}
             >
               <div className="flex-shrink-0 mt-1">

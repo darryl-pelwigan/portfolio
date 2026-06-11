@@ -9,7 +9,7 @@ const renderStars = (rating) => {
   return Array.from({ length: 5 }, (_, index) => (
     <span
       key={index}
-      className={index < rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}
+      className={index < rating ? 'text-indigo-500 dark:text-indigo-400' : 'text-zinc-300 dark:text-zinc-600'}
     >
       ★
     </span>
@@ -18,24 +18,24 @@ const renderStars = (rating) => {
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
+    <section id="skills" className="bg-zinc-50 dark:bg-black border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="section-container">
-        
-      <ComponentTitleHeader title="Skills" heading="Tech Stack" description="A snapshot of my technical skills, tools, and technologies I work with." /> 
+
+        <ComponentTitleHeader title="Skills" heading="Tech Stack" description="A snapshot of my technical skills, tools, and technologies I work with." />
 
         <div className="grid md:grid-cols-2 gap-8 pb-16">
           {SKILL_CATEGORIES.map((category) => (
-            <div key={category.category} className="bg-slate-50 dark:bg-slate-950 border border-gray-200 dark:border-slate-800 rounded-3xl p-8 transition-colors duration-300 shadow-sm">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{category.category}</h3>
-              
-              <div className="space-y-5">
+            <div key={category.category} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-8 transition-colors duration-300 shadow-sm">
+              <h3 className="text-2xl font-bold mb-6 text-zinc-900 dark:text-white">{category.category}</h3>
+
+              <div className="space-y-3">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                  <div key={skill.name} className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 transition duration-200 hover:-translate-y-0.5 hover:border-indigo-400/50 hover:shadow-sm dark:border-zinc-700 dark:bg-zinc-800/50 dark:hover:border-indigo-500/50">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="font-semibold text-gray-900 dark:text-white">{skill.name}</span>
+                      <span className="font-semibold text-zinc-900 dark:text-white">{skill.name}</span>
                       <div className="flex items-center gap-1 text-sm">
                         {renderStars(skill.rating)}
-                        <span className="text-slate-500 dark:text-slate-400">{skill.rating}/5</span>
+                        <span className="text-zinc-500 dark:text-zinc-400 ml-1">{skill.rating}/5</span>
                       </div>
                     </div>
                   </div>

@@ -32,47 +32,47 @@ const contactIcons = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
+    <section id="contact" className="py-20 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="section-container">
-        <ComponentTitleHeader 
+        <ComponentTitleHeader
           title="Contact Me"
           heading="Let's Build Something"
           description="Have a project in mind? Reach out through any of these channels—I'm always open to discussing new opportunities."
         />
 
         <div className="space-y-6">
-          <div className="rounded-[2rem] border border-gray-200 bg-slate-50 p-8 shadow-[0_30px_60px_-30px_rgba(15,23,42,0.08)] dark:border-slate-800 dark:bg-slate-950 dark:shadow-[0_30px_60px_-30px_rgba(15,23,42,0.45)]">
-            <p className="max-w-2xl text-base leading-8 text-gray-600 dark:text-gray-300">
+          <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <p className="max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-300">
               Whether you have a new project, a question about my work, or want to collaborate—I'm here to help. Pick your preferred contact method below to get in touch.
             </p>
           </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {contactMethods.map((method) => (
-                <a
-                  key={method.id}
-                  href={method.href}
-                  target={method.type === 'external' ? '_blank' : undefined}
-                  rel={method.type === 'external' ? 'noopener noreferrer' : undefined}
-                  className="group rounded-[1.75rem] border border-gray-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-50 dark:border-slate-800 dark:bg-slate-950 dark:hover:border-cyan-400 dark:hover:bg-slate-900/90"
-                >
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-500 text-white shadow-sm shadow-cyan-500/20 transition group-hover:bg-cyan-600">
-                      {contactIcons[method.icon]}
-                    </span>
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">
-                        {method.label}
-                      </p>
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 break-words">
-                        {method.value}
-                      </p>
-                    </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {contactMethods.map((method) => (
+              <a
+                key={method.id}
+                href={method.href}
+                target={method.type === 'external' ? '_blank' : undefined}
+                rel={method.type === 'external' ? 'noopener noreferrer' : undefined}
+                className="group rounded-xl border border-zinc-200 bg-zinc-50 p-5 transition duration-200 hover:-translate-y-0.5 hover:border-indigo-400/60 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-500/60"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white shadow-sm shadow-indigo-500/20 transition group-hover:bg-indigo-600">
+                    {contactIcons[method.icon]}
+                  </span>
+                  <div className="space-y-1.5">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-400">
+                      {method.label}
+                    </p>
+                    <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 break-words">
+                      {method.value}
+                    </p>
                   </div>
-                </a>
-              ))}
-            </div>
+                </div>
+              </a>
+            ))}
           </div>
+        </div>
       </div>
     </section>
   )

@@ -12,7 +12,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-gray-300 dark:border-gray-800 transition-colors duration-300">
+    <nav className="fixed top-0 w-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold gradient-text cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -20,25 +20,25 @@ export default function Navbar() {
           </div>
           
           <div className="hidden md:flex gap-8 items-center">
-            <button onClick={() => scrollToSection('about')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+            <button onClick={() => scrollToSection('about')} className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
               About
             </button>
-            <button onClick={() => scrollToSection('skills')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+            <button onClick={() => scrollToSection('skills')} className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
               Skills
             </button>
-            <button onClick={() => scrollToSection('experience')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+            <button onClick={() => scrollToSection('experience')} className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
               Experience
             </button>
-            <button onClick={() => scrollToSection('projects')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+            <button onClick={() => scrollToSection('projects')} className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
               Projects
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+            <button onClick={() => scrollToSection('contact')} className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
               Contact
             </button>
 
             <button
               onClick={toggleTheme}
-              className="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 transition"
+              className="ml-4 p-2 rounded-lg bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition"
               title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDark ? (
@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 transition"
+              className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition"
             >
               {isDark ? (
                 <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -81,7 +81,7 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 bg-white dark:bg-black">
+          <div className="md:hidden pb-4 space-y-2 bg-white dark:bg-zinc-950">
             <button onClick={() => scrollToSection('about')} className="block w-full text-left text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white py-2 transition">
               About
             </button>
