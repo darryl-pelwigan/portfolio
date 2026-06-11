@@ -11,6 +11,8 @@ module.exports = {
         'darker': '#050505',
       },
       fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Space Grotesk', 'Inter', 'sans-serif'],
         'mono': ['Fira Code', 'monospace'],
       }
     },

@@ -1,47 +1,34 @@
-import apiIcon from '../assets/api.svg'
-import phpIcon from '../assets/php.svg'
-import laravelIcon from '../assets/laravel.svg'
-import pythonIcon from '../assets/python.svg'
-import djangoIcon from '../assets/django.svg'
-import wordpressIcon from '../assets/wordpress.svg'
-import mysqlIcon from '../assets/mysq.svg'
-import postgresqlIcon from '../assets/postgresql.svg'
-import reactIcon from '../assets/react.svg'
-import tailwindIcon from '../assets/tailwindcss.svg'
-import githubIcon from '../assets/github.svg'
-import ubuntuIcon from '../assets/ubuntu.svg'
-import postmanIcon from '../assets/postman.svg'
-import jsIcon from '../assets/javascript.svg'
-import htmlIcon from '../assets/html-5.svg'
-import cssIcon from '../assets/css-3.svg'
-import typescriptIcon from '../assets/typescript.svg'
-import codeIgniterIcon from '../assets/codeigniter.svg'
-import javaIcon from '../assets/java.svg'
-import dockerIcon from '../assets/docker.svg'
+import {
+  SiPhp, SiLaravel, SiPython, SiDjango, SiWordpress,
+  SiMysql, SiPostgresql, SiReact, SiTailwindcss, SiTypescript,
+  SiJavascript, SiHtml5, SiCss, SiUbuntu, SiGithub,
+  SiPostman, SiDocker
+} from 'react-icons/si'
+import { FaCode, FaServer } from 'react-icons/fa6'
 
 export const TECH_STACK = {
   backend: [
-    { name: 'PHP', icon: phpIcon },
-    { name: 'Laravel', icon: laravelIcon },
-    { name: 'Python', icon: pythonIcon },
-    { name: 'Django', icon: djangoIcon },
-    { name: 'WordPress', icon: wordpressIcon },
-    { name: 'MySQL', icon: mysqlIcon },
-    { name: 'PostgreSQL', icon: postgresqlIcon }
+    { name: 'PHP', icon: SiPhp },
+    { name: 'Laravel', icon: SiLaravel },
+    { name: 'Python', icon: SiPython },
+    { name: 'Django', icon: SiDjango },
+    { name: 'WordPress', icon: SiWordpress },
+    { name: 'MySQL', icon: SiMysql },
+    { name: 'PostgreSQL', icon: SiPostgresql }
   ],
   frontend: [
-    { name: 'ReactJS', icon: reactIcon },
-    { name: 'Tailwind CSS', icon: tailwindIcon },
-    { name: 'TypeScript', icon: typescriptIcon },
-    { name: 'JavaScript', icon: jsIcon },
-    { name: 'HTML', icon: htmlIcon },
-    { name: 'CSS', icon: cssIcon }
+    { name: 'ReactJS', icon: SiReact },
+    { name: 'Tailwind CSS', icon: SiTailwindcss },
+    { name: 'TypeScript', icon: SiTypescript },
+    { name: 'JavaScript', icon: SiJavascript },
+    { name: 'HTML', icon: SiHtml5 },
+    { name: 'CSS', icon: SiCss }
   ],
   tools: [
-    { name: 'Ubuntu / Linux', icon: ubuntuIcon },
-    { name: 'GitHub', icon: githubIcon },
-    { name: 'Postman', icon: postmanIcon },
-    { name: 'Docker', icon: dockerIcon }
+    { name: 'Ubuntu / Linux', icon: SiUbuntu },
+    { name: 'GitHub', icon: SiGithub },
+    { name: 'Postman', icon: SiPostman },
+    { name: 'Docker', icon: SiDocker }
   ]
 }
 
@@ -72,16 +59,16 @@ export const SERVICES = [
   {
     title: 'Backend Architecture',
     description: 'Designing robust, secure, and scalable backend applications and RESTful APIs using PHP (Laravel) and Python (Django) coupled with optimized SQL databases.',
-    icon: apiIcon
+    icon: FaServer
   },
   {
     title: 'Frontend Development',
     description: 'Crafting highly responsive, interactive, and high-performance user interfaces using React.js, Tailwind CSS, and modern JavaScript environments.',
-    icon: reactIcon
+    icon: SiReact
   },
   {
     title: 'CMS WordPress Development',
     description: 'Building dynamic, highly responsive websites using Elementor. I focus on clean development—leveraging lean custom CSS and efficient workflows to maintain design speed and performance while ensuring maintainability and scalability.',
-    icon: wordpressIcon
+    icon: SiWordpress
   }
 ]

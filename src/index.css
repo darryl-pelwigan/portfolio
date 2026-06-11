@@ -4,23 +4,15 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 font-sans;
+    @apply bg-white text-zinc-900 font-sans;
   }
-  
+
   body.dark {
     @apply bg-black text-white;
   }
-  
-  h1 {
-    @apply text-4xl font-bold;
-  }
-  
-  h2 {
-    @apply text-3xl font-bold;
-  }
-  
-  h3 {
-    @apply text-xl font-semibold;
+
+  h1, h2, h3 {
+    @apply font-display;
   }
 }
 
