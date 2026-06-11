@@ -11,8 +11,12 @@
     @apply bg-black text-white;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     @apply font-display;
+  }
+
+  p {
+    @apply font-sans;
   }
 }
 

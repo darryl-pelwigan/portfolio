@@ -1,7 +1,7 @@
 import React from 'react'
 import ComponentTitleHeader from './ui/ComponentTitleHeader'
 import { projects } from '../constants/projectsData'
-import { getTagIcon } from '../constants/techIconMapper'
+import { getTagMeta } from '../constants/techIconMapper'
 
 export default function Projects() {
   const sortedProjects = [...projects].sort((a, b) => Number(b.Year) - Number(a.Year))
@@ -21,36 +21,36 @@ export default function Projects() {
               key={project.id}
               className="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-400/50 dark:hover:border-indigo-500/40 rounded-xl p-6 transition-all duration-200 flex flex-col shadow-sm"
             >
-              {/* Index · Year */}
+              {/* Index · Year — monospaced, muted hierarchy */}
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-xs font-mono font-bold text-indigo-500 dark:text-indigo-400">
+                <span className="font-mono text-xs font-bold text-indigo-500 dark:text-indigo-400">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="text-zinc-300 dark:text-zinc-700 text-xs select-none">·</span>
-                <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500">
+                <span className="font-mono text-xs font-normal text-zinc-400 dark:text-zinc-500 tracking-wide">
                   {project.Year}
                 </span>
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200 leading-snug">
+              {/* Title — Space Grotesk, bold, tight tracking */}
+              <h3 className="font-display text-lg font-bold tracking-tight text-zinc-900 dark:text-white mb-2.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200 leading-snug">
                 {project.title}
               </h3>
 
-              {/* Description */}
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed flex-grow mb-5">
+              {/* Description — Inter, relaxed line-height */}
+              <p className="font-sans text-sm text-zinc-500 dark:text-zinc-400 leading-loose flex-grow mb-5">
                 {project.description}
               </p>
 
-              {/* Tech icons — icon-only row with tooltip */}
+              {/* Tech icon row — brand colors, hover reveals name via title */}
               <div className="flex items-center gap-3 flex-wrap pt-4 border-t border-zinc-100 dark:border-zinc-800">
                 {project.tags.map((tag) => {
-                  const Icon = getTagIcon(tag)
+                  const { icon: Icon, colorClass } = getTagMeta(tag)
                   return (
                     <span
                       key={tag}
                       title={tag}
-                      className="text-zinc-400 dark:text-zinc-500 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors cursor-default"
+                      className={`transition-opacity opacity-80 hover:opacity-100 cursor-default ${colorClass}`}
                     >
                       <Icon className="w-[18px] h-[18px]" />
                     </span>
