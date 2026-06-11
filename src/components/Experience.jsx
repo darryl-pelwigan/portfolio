@@ -1,53 +1,59 @@
 import React from 'react'
 import ComponentTitleHeader from './ui/ComponentTitleHeader'
 import { experiences } from '../constants/experienceData'
-import { getTagIcon } from '../constants/iconMapper'
+import { getTagMeta } from '../constants/techIconMapper'
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
+    <section id="experience" className="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
       <div className="section-container">
-        <ComponentTitleHeader 
+        <ComponentTitleHeader
           title="Experience"
           heading="Where I've Worked"
           description="From custom web development to building robust backend architectures and dynamic user experiences."
         />
 
-        <div className="space-y-8">
+        <div className="space-y-5">
           {experiences.map((exp) => (
-            <div 
+            <div
               key={exp.id}
-              className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 rounded-lg p-8 transition-colors duration-300"
+              className="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-400/50 dark:hover:border-indigo-500/40 rounded-xl p-7 transition-all duration-200"
             >
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <div className="text-sm text-blue-400 font-semibold mb-2">{exp.period}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{exp.company}</h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-400 mt-1">{exp.role}</p>
-                </div>
-              </div>
+              {/* Date — small, muted, monospaced */}
+              <p className="text-xs font-mono font-normal tracking-widest text-indigo-500 dark:text-indigo-400 uppercase mb-2">
+                {exp.period}
+              </p>
 
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-justify">
+              {/* Company name — Space Grotesk, bold, tight tracking */}
+              <h3 className="font-display text-xl font-bold tracking-tight text-zinc-900 dark:text-white leading-snug">
+                {exp.company}
+              </h3>
+
+              {/* Role — Inter, medium, muted */}
+              <p className="font-sans text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5 mb-4">
+                {exp.role}
+              </p>
+
+              {/* Description — Inter, relaxed leading for max readability */}
+              <p className="font-sans text-sm text-zinc-600 dark:text-zinc-400 leading-loose text-justify mb-5">
                 {exp.description}
               </p>
 
-              <div className="flex flex-wrap gap-3 pt-3">
+              {/* Tech chips */}
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-zinc-100 dark:border-zinc-800">
                 {exp.tags.map((tag) => {
-                  const isWordPressIcon = /wordpress|elementor/i.test(tag)
+                  const { icon: Icon, colorClass } = getTagMeta(tag)
                   return (
-                    <span 
+                    <span
                       key={tag}
-                      className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/70 dark:bg-slate-800/90 text-white text-sm font-medium rounded-full ring-1 ring-white/10 hover:bg-slate-900 dark:hover:bg-slate-700 transition"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs font-medium font-sans text-zinc-600 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors"
                     >
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-gray-700 shadow-sm shadow-black/10">
-                        <img src={getTagIcon(tag)} alt={tag} className={`w-6 h-6 object-contain ${isWordPressIcon ? 'dark:invert' : ''}`} />
-                      </span>
-                      <span>{tag}</span>
+                      <Icon className={`w-3.5 h-3.5 shrink-0 ${colorClass}`} />
+                      {tag}
                     </span>
                   )
                 })}
               </div>
-     
             </div>
           ))}
         </div>

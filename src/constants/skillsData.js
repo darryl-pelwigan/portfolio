@@ -1,47 +1,34 @@
-import apiIcon from '../assets/api.svg'
-import phpIcon from '../assets/php.svg'
-import laravelIcon from '../assets/laravel.svg'
-import pythonIcon from '../assets/python.svg'
-import djangoIcon from '../assets/django.svg'
-import wordpressIcon from '../assets/wordpress.svg'
-import mysqlIcon from '../assets/mysq.svg'
-import postgresqlIcon from '../assets/postgresql.svg'
-import reactIcon from '../assets/react.svg'
-import tailwindIcon from '../assets/tailwindcss.svg'
-import githubIcon from '../assets/github.svg'
-import ubuntuIcon from '../assets/ubuntu.svg'
-import postmanIcon from '../assets/postman.svg'
-import jsIcon from '../assets/javascript.svg'
-import htmlIcon from '../assets/html-5.svg'
-import cssIcon from '../assets/css-3.svg'
-import typescriptIcon from '../assets/typescript.svg'
-import codeIgniterIcon from '../assets/codeigniter.svg'
-import javaIcon from '../assets/java.svg'
-import dockerIcon from '../assets/docker.svg'
+import {
+  SiPhp, SiLaravel, SiPython, SiDjango, SiWordpress,
+  SiMysql, SiPostgresql, SiReact, SiTailwindcss, SiTypescript,
+  SiJavascript, SiHtml5, SiCss, SiUbuntu, SiGithub,
+  SiPostman, SiDocker
+} from 'react-icons/si'
+import { FaServer } from 'react-icons/fa6'
 
 export const TECH_STACK = {
   backend: [
-    { name: 'PHP', icon: phpIcon },
-    { name: 'Laravel', icon: laravelIcon },
-    { name: 'Python', icon: pythonIcon },
-    { name: 'Django', icon: djangoIcon },
-    { name: 'WordPress', icon: wordpressIcon },
-    { name: 'MySQL', icon: mysqlIcon },
-    { name: 'PostgreSQL', icon: postgresqlIcon }
+    { name: 'PHP',        icon: SiPhp,        colorClass: 'text-violet-500 dark:text-violet-400' },
+    { name: 'Laravel',    icon: SiLaravel,    colorClass: 'text-red-500 dark:text-red-400' },
+    { name: 'Python',     icon: SiPython,     colorClass: 'text-yellow-500 dark:text-yellow-400' },
+    { name: 'Django',     icon: SiDjango,     colorClass: 'text-emerald-600 dark:text-emerald-400' },
+    { name: 'WordPress',  icon: SiWordpress,  colorClass: 'text-sky-600 dark:text-sky-400' },
+    { name: 'MySQL',      icon: SiMysql,      colorClass: 'text-sky-600 dark:text-sky-500' },
+    { name: 'PostgreSQL', icon: SiPostgresql, colorClass: 'text-indigo-500 dark:text-indigo-400' },
   ],
   frontend: [
-    { name: 'ReactJS', icon: reactIcon },
-    { name: 'Tailwind CSS', icon: tailwindIcon },
-    { name: 'TypeScript', icon: typescriptIcon },
-    { name: 'JavaScript', icon: jsIcon },
-    { name: 'HTML', icon: htmlIcon },
-    { name: 'CSS', icon: cssIcon }
+    { name: 'ReactJS',      icon: SiReact,      colorClass: 'text-cyan-500 dark:text-cyan-400' },
+    { name: 'Tailwind CSS', icon: SiTailwindcss, colorClass: 'text-cyan-500 dark:text-cyan-400' },
+    { name: 'TypeScript',   icon: SiTypescript, colorClass: 'text-blue-500 dark:text-blue-400' },
+    { name: 'JavaScript',   icon: SiJavascript, colorClass: 'text-yellow-400 dark:text-yellow-300' },
+    { name: 'HTML',         icon: SiHtml5,      colorClass: 'text-orange-500 dark:text-orange-400' },
+    { name: 'CSS',          icon: SiCss,        colorClass: 'text-blue-500 dark:text-blue-400' },
   ],
   tools: [
-    { name: 'Ubuntu / Linux', icon: ubuntuIcon },
-    { name: 'GitHub', icon: githubIcon },
-    { name: 'Postman', icon: postmanIcon },
-    { name: 'Docker', icon: dockerIcon }
+    { name: 'Ubuntu / Linux', icon: SiUbuntu,  colorClass: 'text-orange-500 dark:text-orange-400' },
+    { name: 'GitHub',         icon: SiGithub,  colorClass: 'text-zinc-600 dark:text-zinc-300' },
+    { name: 'Postman',        icon: SiPostman, colorClass: 'text-orange-500 dark:text-orange-400' },
+    { name: 'Docker',         icon: SiDocker,  colorClass: 'text-sky-500 dark:text-sky-400' },
   ]
 }
 
@@ -72,16 +59,19 @@ export const SERVICES = [
   {
     title: 'Backend Architecture',
     description: 'Designing robust, secure, and scalable backend applications and RESTful APIs using PHP (Laravel) and Python (Django) coupled with optimized SQL databases.',
-    icon: apiIcon
+    icon: FaServer,
+    colorClass: 'text-violet-500 dark:text-violet-400'
   },
   {
     title: 'Frontend Development',
     description: 'Crafting highly responsive, interactive, and high-performance user interfaces using React.js, Tailwind CSS, and modern JavaScript environments.',
-    icon: reactIcon
+    icon: SiReact,
+    colorClass: 'text-cyan-500 dark:text-cyan-400'
   },
   {
     title: 'CMS WordPress Development',
     description: 'Building dynamic, highly responsive websites using Elementor. I focus on clean development—leveraging lean custom CSS and efficient workflows to maintain design speed and performance while ensuring maintainability and scalability.',
-    icon: wordpressIcon
+    icon: SiWordpress,
+    colorClass: 'text-sky-600 dark:text-sky-400'
   }
 ]

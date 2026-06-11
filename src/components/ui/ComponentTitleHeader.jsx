@@ -5,7 +5,7 @@ export default function ComponentTitleHeader({ title, heading, description }) {
     <div className="mb-12 md:mb-16 text-center md:text-left mx-auto md:mx-0">
       {/* Category Tag */}
       <div className="flex justify-center md:justify-start mb-3">
-        <span className="text-xs font-mono font-bold tracking-widest text-cyan-500 dark:text-cyan-400 uppercase">
+        <span className="text-xs font-mono font-bold tracking-widest text-indigo-500 dark:text-indigo-400 uppercase">
           // {title}
         </span>
       </div>

@@ -2,17 +2,17 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-black border-t border-gray-300 dark:border-gray-800 py-8 transition-colors duration-300">
+    <footer className="bg-zinc-50 dark:bg-black border-t border-zinc-200 dark:border-zinc-800 py-8 transition-colors duration-300">
       <div className="section-container flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="text-center md:text-left">
-          <p className="text-gray-500 dark:text-gray-400">© 2026 Darryl Pelwigan. All rights reserved.</p>
-          <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">Crafting modern experiences with clean design and clear communication.</p>
+          <p className="text-zinc-500 dark:text-zinc-400">© 2026 Darryl Pelwigan. All rights reserved.</p>
+          <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-2">Crafting modern experiences with clean design and clear communication.</p>
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-4">
           <a
             href="mailto:darrylpelwigan@gmail.com"
-            className="inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-800 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 transition hover:border-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-400"
+            className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-2 text-sm text-zinc-700 dark:text-zinc-200 transition hover:border-indigo-400 hover:text-indigo-600 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
           >
             <span aria-hidden="true">✉️</span>
             darrylpelwigan@gmail.com
@@ -21,7 +21,7 @@ export default function Footer() {
             href="https://drive.google.com/file/d/1u5PAhfLObayZqJaIjkM9LOdbxhJljmhw/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 px-4 py-2 text-sm text-white transition"
+            className="inline-flex items-center justify-center rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white px-4 py-2 text-sm text-white transition"
           >
             View Resume
           </a>
@@ -29,7 +29,7 @@ export default function Footer() {
             href="https://github.com/darryl-pelwigan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition"
+            className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
             GitHub
           </a>
@@ -37,7 +37,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/darryl-pelwigan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition"
+            className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
             LinkedIn
           </a>
