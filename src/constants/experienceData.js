@@ -1,7 +1,7 @@
 export const experiences = [
   {
     id: 1,
-    period: 'July 2024 — Present',
+    period: 'July 2024 — July 2026',
     company: 'Bnext INC.',
     role: 'Software Engineer',
     description: 'Full-Stack Developer dedicated to building optimized web applications and custom Web APIs that balance engineering excellence with business goals. I am passionate about driving software process improvements that streamline delivery and increase code quality. Known for strong cross-functional collaboration, I work hand-in-hand with engineering teams, product owners, and business analysts to translate complex visions into scalable, maintainable technical solutions.',
