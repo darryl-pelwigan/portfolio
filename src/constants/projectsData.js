@@ -45,6 +45,6 @@ export const projects = [
     description: 'A dynamic web application custom-engineered for a legal sector client. Built with custom post types and relational database structures to manage complex case listings, legal services, and firm archives. Developed using optimized, lean custom CSS and modern JavaScript to guarantee exceptional site speed and a tailored, high-performance UI without relying on unnecessary plugins.',
     tags: ['WordPress', 'Elementor', 'Custom CSS', 'JavaScript', 'Dynamic Architecture'],
     color: 'from-amber-600 to-green-700',
-    Year: '2025',
+    Year: '2026',
   }
 ]
