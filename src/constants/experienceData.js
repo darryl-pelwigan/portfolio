@@ -1,6 +1,7 @@
 export const experiences = [
   {
     id: 1,
+    displayPeriod: 'JUL 2024',
     period: 'July 2024 — July 2026',
     company: 'Bnext INC.',
     role: 'Software Engineer',
@@ -9,6 +10,7 @@ export const experiences = [
   },
   {
     id: 2,
+    displayPeriod: 'OCT 2023 - MAY 2024',
     period: 'October 2023 — May 2024',
     company: 'Reveron Consulting / Digile INC.',
     role: 'Backend Developer',
@@ -17,14 +19,16 @@ export const experiences = [
   },
   {
     id: 3,
+    displayPeriod: 'SEP 2021 - MAR 2022',
     period: 'September 2021 — March 2022',
-    company: 'Application Developer (Contractual)',
-    role: 'Bravissimo Resourcing, Inc',
+    company: 'Bravissimo Resourcing, Inc',
+    role: 'Application Developer (Contractual)',
     description: 'Full-Stack Engineer dedicated to designing, building, and configuring high-quality applications that satisfy specific business processes and functional requirements. Brings strong problem-solving capabilities to software operations, efficiently analyzing, investigating, and resolving technical incidents for clients to maintain peak system health.',
     tags: ['Basic Apigee API Management', 'Node JS', 'React JS', 'MySQL']
   },
   {
     id: 4,
+    displayPeriod: 'APR 2018 - SEP 2020',
     period: 'April 2018 — September 2020',
     company: 'Danalex Corporation INC.',
     role: 'Software Developer',
