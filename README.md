@@ -1,32 +1,65 @@
-# Full Stack Developer Portfolio
+# Darryl Pelwigan — Portfolio
 
-A modern, responsive portfolio website template focused on Full Stack Developer work. Built with React, Vite, and Tailwind CSS for the frontend — easily extended with a Node/Express or other backend for API and data needs.
+Personal portfolio website for **Darryl Pelwigan**, a Full-Stack Web Developer building scalable apps, websites, and tools. Built with React, Vite, and Tailwind CSS.
 
-## Why This Template
+**Live site:** [darrylpelwigan.vercel.app](https://darrylpelwigan.vercel.app/)
 
-- Modern frontend tooling with fast development feedback using Vite
-- Responsive, mobile-first UI with Tailwind CSS
-- Component-driven structure to showcase projects, skills, and experience
-- Easy to extend into a full-stack app (add an API, database, or server-side rendering)
+---
 
-## Features
+## Tech Stack
 
-- **Modern Design**: Dark theme with gradient accents and smooth animations
-- **Responsive Layout**: Works across phones, tablets, and desktop
-- **Componentized UI**: Clear React components for each section
-- **Easy Deployment**: Ready for static hosting (Vercel) or full-stack deployment
+| Layer      | Technologies                                      |
+|------------|---------------------------------------------------|
+| Frontend   | React 18, Vite, Tailwind CSS, React Icons        |
+| Deployment | Vercel (with `@vercel/analytics`)                 |
+| Tooling    | PostCSS, Autoprefixer                             |
+
+---
 
 ## Sections
 
-- **Hero**: Introduction and headline
-- **About**: Short biography and highlights
-- **Projects**: Showcase work with descriptions and tech stacks
-- **Skills**: Technical proficiencies and tools
-- **Experience**: Timeline of roles and achievements
-- **Contact**: Contact links and form
-- **Footer**: Social links and copyright
+- **Hero** — Introduction, headline, resume link, and social links
+- **About** — Biography, interactive terminal, mock editor, and services overview
+- **Projects** — Showcase of production-ready applications (see below)
+- **Skills** — Tech stack with proficiency ratings by category
+- **Experience** — Work history timeline
+- **Contact** — Contact links and social profiles
+- **Footer** — Social links and copyright
 
-## Project Structure (this repository)
+---
+
+## Featured Projects
+
+| Project | Year | Stack |
+|---------|------|-------|
+| HRIS Management System | 2018 | PHP, CodeIgniter, MySQL, Linux Server |
+| Purchase Order Request System | 2019 | Laravel, MySQL, Ubuntu Server |
+| Ticketing System for Issues & Requests | 2025 | Laravel, Bootstrap, MySQL |
+| Real Estate Listing Platform | 2026 | Python, Django, React JS, TypeScript, PostgreSQL, Tailwind CSS |
+| Timesheet Tracker / Management System | 2026 | Laravel, React JS, API, MySQL, MUI |
+| Website — Law Firm Platform | 2026 | WordPress, Elementor, Custom CSS, JavaScript |
+
+---
+
+## Skills
+
+**Web Development**
+- Laravel — Expert
+- Django Rest Framework — Advanced
+- React JS — Advanced
+- PostgreSQL — Advanced
+- WordPress (Elementor) — Advanced
+- TypeScript — Intermediate
+
+**Infrastructure & Tools**
+- GitHub — Expert
+- Postman — Expert
+- Ubuntu / Linux — Intermediate
+- Docker — Intermediate
+
+---
+
+## Project Structure
 
 ```
 portfolio/
@@ -34,6 +67,7 @@ portfolio/
 │   ├── App.jsx
 │   ├── main.jsx
 │   ├── index.css
+│   ├── assets/
 │   ├── components/
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
@@ -52,31 +86,35 @@ portfolio/
 │   │   ├── SocialLinks.jsx
 │   │   └── TechStackCloud.jsx
 │   ├── constants/
-│   │   └── Data.jsx
+│   │   ├── aboutData.js
+│   │   ├── contactData.js
+│   │   ├── experienceData.js
+│   │   ├── projectsData.js
+│   │   ├── skillsData.js
+│   │   ├── socialLinksData.js
+│   │   └── techIconMapper.js
 │   └── context/
 │       └── ThemeContext.jsx
 ├── index.html
 ├── package.json
 ├── tailwind.config.js
 ├── postcss.config.js
+├── vercel.json
 └── vite.config.js
 ```
 
+---
+
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 16+ is recommended
-- npm (or yarn)
-
-### Install & Run
+**Prerequisites:** Node.js 16+
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:5173 to view the site locally.
+Open [http://localhost:5173](http://localhost:5173) to view locally.
 
 ### Build for Production
 
@@ -84,49 +122,41 @@ Open http://localhost:5173 to view the site locally.
 npm run build
 ```
 
-Build output will be in the `dist/` folder.
+Output goes to the `dist/` folder.
 
-## Customization Guide
-
-Edit the component files inside `src/components` to update content and layout. Key files:
-
-- `src/components/Hero.jsx` — headline, name, hero stats
-- `src/components/About.jsx` — biography and summary
-- `src/components/Projects.jsx` — project cards and details
-- `src/components/Skills.jsx` — skills and proficiency visualization
-- `src/components/Experience.jsx` — work history timeline
-- `src/components/Contact.jsx` — contact links and form behavior
-- `src/components/Footer.jsx` — social links and footer content
-
-Shared UI components live in `src/components/ui/` and constants are in `src/constants/Data.jsx`.
-
-## Extending to Full Stack
-
-To turn this into a full-stack portfolio, add a backend service (e.g., Node + Express, Fastify, or any server) to supply project data, handle contact form submissions, or serve a REST/GraphQL API. Common steps:
-
-1. Create a `server/` folder with an Express app
-2. Add API endpoints for projects, posts, or contact submissions
-3. Secure and host the backend (Heroku, Render, Vercel Server Functions, or a VPS)
-4. Point frontend fetch calls to the backend API (use `import.meta.env` for base URLs)
+---
 
 ## Deployment
 
-This project can be deployed as a static site (frontend-only) or as a full-stack app:
+Deployed on **Vercel** at [darrylpelwigan.vercel.app](https://darrylpelwigan.vercel.app/).
 
-- Static frontend: Deploy `dist/` to Vercel, Netlify, or any static host
-- Full-stack: Deploy backend separately or as serverless functions, and configure frontend to call the API
+To deploy your own fork:
+1. Push to GitHub
+2. Import the repo on [vercel.com](https://vercel.com)
+3. Vercel auto-detects Vite — no extra config needed
 
-## Tips
+---
 
-1. Replace placeholder visuals with real screenshots or images in the Projects section
-2. Connect the Contact form to a server, EmailJS, or Formspree for real submissions
-3. Add SEO meta tags in `index.html` and structured data for better discoverability
+## Customization
+
+All content lives in `src/constants/` — no component edits needed for most updates:
+
+- `projectsData.js` — project cards (title, description, tags, year)
+- `skillsData.js` — skill categories, ratings, and tech stack cloud
+- `experienceData.js` — work history timeline
+- `aboutData.js` — biography text
+- `contactData.js` — contact links
+- `socialLinksData.js` — social media links
+
+---
 
 ## Resources
 
 - [Vite Docs](https://vitejs.dev/)
 - [React Docs](https://react.dev/)
 - [Tailwind CSS Docs](https://tailwindcss.com/)
+- [Vercel Docs](https://vercel.com/docs)
 
 ---
-Last Updated: June 2026
+
+Last Updated: July 2026
