@@ -1,8 +1,13 @@
 # Darryl Pelwigan — Portfolio
 
-Personal portfolio website for **Darryl Pelwigan**, a Full-Stack Web Developer building scalable apps, websites, and tools. Built with React, Vite, and Tailwind CSS.
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://darrylpelwigan.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-darrylpelwigan.vercel.app-6366f1?style=for-the-badge&logo=globe&logoColor=white)](https://darrylpelwigan.vercel.app/)
 
-**Live site:** [darrylpelwigan.vercel.app](https://darrylpelwigan.vercel.app/)
+> This is the personal portfolio of **Darryl Pelwigan** — a Full-Stack Web Developer based in the Philippines. The live site at [darrylpelwigan.vercel.app](https://darrylpelwigan.vercel.app/) is my own profile, deployed and maintained on Vercel.
+
+Built with React, Vite, and Tailwind CSS.
+
+**Live site:** [https://darrylpelwigan.vercel.app/](https://darrylpelwigan.vercel.app/)
 
 ---
 
