@@ -2,7 +2,7 @@ import {
   SiPhp, SiLaravel, SiPython, SiDjango, SiWordpress,
   SiMysql, SiPostgresql, SiReact, SiTailwindcss, SiTypescript,
   SiJavascript, SiHtml5, SiCss, SiUbuntu, SiGithub,
-  SiPostman, SiDocker
+  SiPostman, SiDocker, SiClaude, SiGithubcopilot
 } from 'react-icons/si'
 import { FaServer } from 'react-icons/fa6'
 
@@ -29,6 +29,8 @@ export const TECH_STACK = {
     { name: 'GitHub',         icon: SiGithub,  colorClass: 'text-zinc-600 dark:text-zinc-300' },
     { name: 'Postman',        icon: SiPostman, colorClass: 'text-orange-500 dark:text-orange-400' },
     { name: 'Docker',         icon: SiDocker,  colorClass: 'text-sky-500 dark:text-sky-400' },
+    { name: 'Claude Code',    icon: SiClaude,        colorClass: 'text-orange-600 dark:text-orange-400' },
+    { name: 'GitHub Copilot', icon: SiGithubcopilot, colorClass: 'text-zinc-700 dark:text-zinc-300' },
   ]
 }
 
@@ -49,6 +51,8 @@ export const SKILL_CATEGORIES = [
     skills: [
       { name: 'GitHub', rating: 5 },
       { name: 'Postman', rating: 5 },
+      { name: 'Claude Code', rating: 4 },
+      { name: 'GitHub Copilot', rating: 4 },
       { name: 'Ubuntu / Linux', rating: 3 },
       { name: 'Docker', rating: 3 },
     ]
